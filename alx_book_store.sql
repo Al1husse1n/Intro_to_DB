@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS Customers(
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
-    adress TEXT
+    address TEXT
 );
 CREATE TABLE IF NOT EXISTS Orders(
     order_id  INT PRIMARY KEY,
@@ -30,4 +30,3 @@ CREATE TABLE IF NOT EXISTS Order_Details(
     FOREIGN KEY(order_id) REFERENCES Orders(order_id),
     FOREIGN KEY(book_id) REFERENCES Books(book_id)
 );
-select * from Order_Details;
